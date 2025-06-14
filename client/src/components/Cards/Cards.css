@@ -1,0 +1,39 @@
+.__page {
+  margin-top: 20vh;
+}
+.cards {
+  display: flex;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px 20px;
+  height: 600px;
+  width: 33%;
+}
+
+.card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.title {
+  display: block;
+  margin: 40px auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .card {
+    width: 100%;
+  }
+}

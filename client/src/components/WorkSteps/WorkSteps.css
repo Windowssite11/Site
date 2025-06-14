@@ -1,0 +1,112 @@
+/* Основные стили секции */
+.work-steps-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+/* Контейнер шагов */
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Элемент шага */
+.step-item {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 20%;
+  padding: 0 10px;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: #2a7d2e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+.step-content {
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 25px 15px;
+  height: 150px;
+  transition: all 0.3s;
+}
+
+.step-item:hover .step-content {
+  background: rgba(42, 125, 46, 0.05);
+  transform: translateY(-5px);
+}
+
+.icon-wrapper {
+  margin: 0 auto 15px;
+  color: #2a7d2e;
+  font-size: 40px;
+}
+
+.step-title {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.step-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.step-arrow {
+  position: absolute;
+  top: 10px;
+  right: -15px;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .section-title {
+    display: block;
+    padding: 10px 0px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .steps-container {
+    flex-wrap: wrap;
+  }
+
+  .step-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .steps-container::before {
+    display: none;
+  }
+
+  .step-arrow {
+    display: none;
+  }
+}

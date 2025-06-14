@@ -1,0 +1,27 @@
+.hero {
+  background: url("../../images/main.avif") no-repeat center/cover;
+  padding: 130px 100px;
+  height: 60vh;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  background-color: green;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.hero__subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.hero__content img {
+  width: 350px;
+  float: right;
+}
