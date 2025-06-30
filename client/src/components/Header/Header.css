@@ -1,0 +1,264 @@
+.header {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+  position: static;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1001;
+}
+
+.header__logo img {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.header__logo:hover img {
+  transform: scale(1.05);
+}
+
+.header__nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header__nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.header__contacts a:hover {
+  transform: scale(1.03);
+}
+
+.header__contacts a {
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  color: black;
+  padding: 10px 20px;
+}
+
+.nav-item {
+  display: block;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #2a7fef;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  background: #2a7fef;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Бургер-меню */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  z-index: 1001;
+}
+
+.burger-line {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.burger-line:nth-child(1) {
+  top: 0;
+}
+
+.burger-line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-line:nth-child(3) {
+  bottom: 0;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-menu ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu ul li {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-menu .nav-item {
+  font-size: 20px;
+  padding: 12px 0;
+  display: block;
+  width: 100%;
+  color: #333;
+}
+
+.mobile-menu .nav-item:hover {
+  color: #2a7fef;
+  background: rgba(42, 127, 239, 0.05);
+  border-radius: 8px;
+}
+
+.mobile-contacts {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.mobile-contacts a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Анимация бургера при открытии */
+.burger-menu.open .burger-line:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  background-color: #2a7fef;
+}
+
+.burger-menu.open .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.open .burger-line:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  background-color: #2a7fef;
+}
+
+/* Медиа-запросы для адаптива */
+@media (max-width: 992px) {
+  nav ul {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .header__contacts a span {
+    display: none;
+  }
+  .header__contacts svg {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__inner {
+    padding: 0 15px;
+  }
+
+  .header__logo img {
+    height: 35px;
+  }
+
+  .mobile-menu .nav-item {
+    font-size: 18px;
+  }
+
+  .mobile-contacts a {
+    font-size: 16px;
+  }
+}

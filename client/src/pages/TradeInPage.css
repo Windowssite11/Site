@@ -1,0 +1,186 @@
+.trade-in-page {
+  padding-top: 80px;
+}
+
+.trade-in-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/main-bg.jpg") no-repeat center/cover;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.trade-in-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.trade-in-hero .subtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.trade-in-content {
+  padding: 60px 0;
+}
+
+.trade-in-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.trade-in-info h2 {
+  font-size: 2rem;
+  color: #2a7d2e;
+  margin-bottom: 30px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.step-number {
+  background: #2a7d2e;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.step-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.trade-in-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.benefits h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2a7d2e;
+  margin-bottom: 40px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.benefit-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+  color: #2a7d2e;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.benefit-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 50px;
+  background: #f7f7f7;
+  border-radius: 10px;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  color: #2a7d2e;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background: #2a7d2e;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  background: #1e5a21;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+  .trade-in-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trade-in-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .trade-in-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .trade-in-hero .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .trade-in-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .benefits h2,
+  .cta-section h2 {
+    font-size: 1.8rem;
+  }
+}
